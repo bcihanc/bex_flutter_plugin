@@ -2,14 +2,14 @@ group 'com.bkm.mobil.bex_flutter_plugin'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.5.0'
+    ext.kotlin_version = '1.9.20'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -23,6 +23,7 @@ rootProject.allprojects {
         jcenter()
         maven {
             url = properties.getProperty("bkm_maven_url")
+            allowInsecureProtocol = true
             credentials {
                 username = properties.getProperty("bkm_username")
                 password = properties.getProperty("bkm_password")
