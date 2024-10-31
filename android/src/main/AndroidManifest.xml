@@ -1,3 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.bkm.mobil.bex_flutter_plugin">
+    package="com.bkm.mobil.bex_flutter_plugin">
+
+    <application>
+        <receiver
+            android:name="com.bkm.bexandroidsdk.ui.activities.otp.OtpForPaymentReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bkm.ACTION_OTP_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
 </manifest>
