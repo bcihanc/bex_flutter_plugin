@@ -15,7 +15,7 @@ buildscript {
 }
 
 Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+properties.load(project.rootProject.file('bkm.properties').newDataInputStream())
 
 rootProject.allprojects {
     repositories {
